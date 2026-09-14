@@ -1,0 +1,164 @@
+:root {
+    --primary-navy: #0f172a;
+    --accent-gold: #d97706;
+    --accent-gold-light: #fef3c7;
+    --accent-gold-hover: #b45309;
+    --bg-sand: #faf9f6;
+    --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-sand);
+    color: #334155;
+}
+
+h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+}
+
+.text-gold {
+    color: var(--accent-gold) !important;
+}
+
+.bg-navy {
+    background-color: var(--primary-navy) !important;
+}
+
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--accent-gold-hover);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--accent-gold);
+    color: var(--accent-gold);
+    background: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--accent-gold);
+    color: #ffffff;
+}
+
+/* Glassmorphism Navbar & Booking Bar */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: var(--card-shadow);
+}
+
+/* Full-Width Hero Slideshow */
+.hero-slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    min-height: 550px;
+    overflow: hidden;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease;
+    transform: scale(1.04);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.hero-slide-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.75) 100%);
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    right: 5%;
+    z-index: 10;
+    color: #ffffff;
+    max-width: 800px;
+}
+
+/* Room & Feature Cards */
+.room-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.room-card-img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.badge-amenity {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
